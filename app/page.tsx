@@ -12,18 +12,20 @@ export default function Home() {
     <div className="min-h-screen bg-[#1e1e1e] flex justify-center">
       <div className="w-full max-w-[1440px] min-w-[768px]">
         {/* Mobile Message - Shows under 1059px */}
-        <div className="max-[1058px]:flex hidden min-h-screen flex-col items-center justify-center bg-black text-white p-4 text-center">
-          <div className="mb-8">
+        <div className="max-[1058px]:flex hidden min-h-screen flex-col items-center justify-center bg-black text-white p-6 text-center">
+          <div className="mb-6">
             <Image
               src="/stridelogowhite.png"
               alt="STRIDE Logo"
-              width={300}
-              height={300}
-              className="mx-auto"
+              width={200}
+              height={200}
+              className="mx-auto w-auto h-auto max-w-[200px] max-h-[200px]"
             />
           </div>
-          <h1 className="text-base font-bold mb-4">Mobile Not Supported</h1>
-          <p className="text-base mb-6">
+          <h1 className="text-sm sm:text-base font-bold mb-4 px-2">
+            Mobile Not Supported
+          </h1>
+          <p className="text-xs sm:text-base mb-6 px-4 leading-relaxed max-w-sm">
             Please visit our website on a desktop device for the best
             experience.
           </p>
@@ -31,7 +33,7 @@ export default function Home() {
             href="https://dustofwar.net"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-base text-blue-400 hover:text-blue-300 underline"
+            className="text-xs sm:text-base text-blue-400 hover:text-blue-300 underline px-4 py-2 transition-colors"
           >
             Visit dustofwar.net
           </Link>
