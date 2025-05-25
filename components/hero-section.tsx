@@ -18,15 +18,15 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-black/50" />
       </div>
 
+      {/* Top Title - Positioned absolutely at top */}
+      <div className="absolute top-5 left-1/2 -translate-x-1/2 w-full max-w-[600px] lg:max-w-[800px] px-4 lg:px-8 z-10">
+        <p className="font-['anta'] text-lg lg:text-xl leading-[120%] tracking-[0.2em] capitalize text-white text-center">
+          Step Into The Future Of Combat Simulation
+        </p>
+      </div>
+
       {/* Content Container */}
       <div className="relative z-10 w-full max-w-[1200px] mx-auto px-4 lg:px-8 flex flex-col items-center">
-        {/* Top Title */}
-        <div className="w-full max-w-[600px] lg:max-w-[800px] mb-4 lg:mb-6 -mt-4 lg:-mt-10">
-          <p className="font-['anta'] text-lg lg:text-xl leading-[120%] tracking-[0.2em] capitalize text-white text-center">
-            Step Into The Future Of Combat Simulation
-          </p>
-        </div>
-
         {/* Logo */}
         <div className="w-[17%] h-auto min-w-[180px] max-w-[245px] mb-6 lg:mb-8">
           <div className="relative w-full aspect-[245/316]">

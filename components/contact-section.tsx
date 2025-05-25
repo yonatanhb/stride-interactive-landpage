@@ -115,7 +115,7 @@ export function ContactSection() {
           <div className="flex-1 lg:max-w-[500px] w-full">
             {/* Contact us Title */}
             <h3 className="font-['Georama'] font-semibold text-base lg:text-[19.2px] leading-[150%] text-center tracking-[0.15em] text-[#EFEFEF] mb-4">
-              contact us
+              Contact Us
             </h3>
 
             {/* Decorative Line */}
