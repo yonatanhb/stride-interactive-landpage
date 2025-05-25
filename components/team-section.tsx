@@ -1,8 +1,8 @@
-import Image from "next/image"
+import Image from "next/image";
 
 export function TeamSection() {
   return (
-    <section className="relative py-20 text-white">
+    <section className="relative w-[1441px] h-[696px] text-white">
       {/* Background Image - pic4 */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -14,9 +14,13 @@ export function TeamSection() {
         <div className="absolute inset-0 bg-black/70" />
       </div>
 
-      <div className="container mx-auto px-4 z-10 relative">
-        <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center">Meet the Team</h2>
-        <p className="text-lg text-center mb-12">Led by firsthand experience and creative drive</p>
+      <div className="container mx-auto px-4 z-10 relative h-full flex flex-col justify-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center">
+          Meet the Team
+        </h2>
+        <p className="text-lg text-center mb-12">
+          Led by firsthand experience and creative drive
+        </p>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {[1, 2, 3, 4].map((i) => (
@@ -38,11 +42,11 @@ export function TeamSection() {
 
         <div className="mt-16 text-center">
           <p className="text-lg mb-4">
-            App created by 15 more developers, technical designers, and artists who bring STRIDE innovations to the next
-            level
+            App created by 15 more developers, technical designers, and artists
+            who bring STRIDE innovations to the next level
           </p>
         </div>
       </div>
     </section>
-  )
+  );
 }
