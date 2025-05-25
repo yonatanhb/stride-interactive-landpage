@@ -79,7 +79,7 @@ export function ContactSection() {
   };
 
   return (
-    <section className="relative py-20">
+    <section className="relative w-[1440px] h-[523px]">
       {/* Background Image - pic5 */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -91,8 +91,8 @@ export function ContactSection() {
         <div className="absolute inset-0 bg-black/60" />
       </div>
 
-      <div className="container mx-auto px-4 z-10 relative">
-        <div className="flex flex-col md:flex-row">
+      <div className="container mx-auto px-4 z-10 relative h-full flex items-center">
+        <div className="flex flex-col md:flex-row w-full">
           <div className="md:w-1/2 mb-10 md:mb-0 text-white">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               LET&apos;S BUILD THE FUTURE OF COMBAT SIMULATION
