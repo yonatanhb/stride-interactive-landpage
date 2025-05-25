@@ -16,13 +16,13 @@ const teamMembers = [
   {
     name: "Aviv Roseman",
     title: "COO",
-    image: "/team/tm3.jpg",
-    linkedinUrl: "#aviv-roseman-linkedin",
+    image: "/team/tm4.jpg",
+    linkedinUrl: "https://www.linkedin.com/in/aviv-rosenman/",
   },
   {
     name: "Saar Partush",
     title: "CAO",
-    image: "/team/tm4.jpg",
+    image: "/team/tm3.jpg",
     linkedinUrl: "https://www.linkedin.com/in/saar-partush-7bb372271/",
   },
 ];

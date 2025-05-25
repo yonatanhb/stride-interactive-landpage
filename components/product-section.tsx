@@ -55,8 +55,8 @@ export function ProductSection() {
               Visit the Dust of War Website&gt;&gt;
             </a>
 
-            <h3 className="font-alumni text-white font-medium uppercase mb-4 text-xl lg:text-[26px] leading-[110%] tracking-[0.05em]">
-              DUST OF WAR REDEFINES WHAT TACTICAL SHOOTERS CAN BE
+            <h3 className="font-alumni text-white font-medium mb-4 text-xl lg:text-[26px] leading-[110%] tracking-[0.05em]">
+              Dust Of War redefines what tactical shooters can be
             </h3>
 
             <p className="font-georama text-[#EDEDED] text-base lg:text-[18px] leading-[150%] tracking-[0.15em]">
