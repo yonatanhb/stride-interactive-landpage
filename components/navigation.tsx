@@ -5,7 +5,7 @@ export function Navigation() {
     <nav className="sticky top-0 w-[1440px] z-50 bg-black/80 backdrop-blur-sm">
       <div className="px-4 py-4 flex justify-between items-center">
         <div className="flex-1 flex justify-start">
-          <Link href="/" className="text-white font-bold text-xl">
+          <Link href="/" className="font-['anta'] text-white font-bold text-xl">
             STRIDE
           </Link>
         </div>
@@ -13,7 +13,7 @@ export function Navigation() {
           <div className="flex space-x-6">
             <div className="group flex flex-col items-center">
               <Link
-                href="#section1"
+                href="#home"
                 className="text-white hover:text-gray-300 transition-colors"
               >
                 Home
@@ -24,7 +24,7 @@ export function Navigation() {
             </div>
             <div className="group flex flex-col items-center">
               <Link
-                href="#section3"
+                href="#about"
                 className="text-white hover:text-gray-300 transition-colors"
               >
                 About
@@ -35,7 +35,7 @@ export function Navigation() {
             </div>
             <div className="group flex flex-col items-center">
               <Link
-                href="#section5"
+                href="#contact"
                 className="text-white hover:text-gray-300 transition-colors"
               >
                 Contact us

@@ -85,7 +85,7 @@ export function ContactSection() {
 
   return (
     <section
-      id="section5"
+      id="contact"
       className="relative w-[1440px] h-[523px] bg-cover bg-center"
       style={{ backgroundImage: "url(/pic5.png)" }}
     >

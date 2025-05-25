@@ -4,7 +4,7 @@ import Link from "next/link";
 export function HeroSection() {
   return (
     <section
-      id="section1"
+      id="home"
       className="relative w-[1440px] h-[726px] flex items-center justify-center text-white"
     >
       {/* Background Image - pic1 */}
