@@ -10,9 +10,9 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#1e1e1e] flex justify-center">
-      <div className="w-[1440px]">
-        {/* Mobile Message */}
-        <div className="md:hidden min-h-screen flex flex-col items-center justify-center bg-black text-white p-4 text-center">
+      <div className="w-full max-w-[1440px] min-w-[768px]">
+        {/* Mobile Message - Shows under 1059px */}
+        <div className="max-[1058px]:flex hidden min-h-screen flex-col items-center justify-center bg-black text-white p-4 text-center">
           <div className="mb-8">
             <Image
               src="/stridelogowhite.png"
@@ -37,8 +37,8 @@ export default function Home() {
           </Link>
         </div>
 
-        {/* Desktop Content */}
-        <main className="hidden md:block">
+        {/* Desktop Content - Shows 1059px and above */}
+        <main className="hidden min-[1059px]:block">
           <Navigation />
           <HeroSection />
           <FeatureSection />

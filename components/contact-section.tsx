@@ -1,6 +1,6 @@
 "use client";
-import React, { useState } from "react";
-import Image from "next/image";
+import type React from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -86,7 +86,7 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="relative w-[1440px] h-[523px] bg-cover bg-center"
+      className="relative w-full h-[523px] lg:h-[523px] md:h-[450px] bg-cover bg-center"
       style={{ backgroundImage: "url(/pic5.png)" }}
     >
       {/* Gradient Overlay */}
@@ -96,154 +96,155 @@ export function ContactSection() {
           background:
             "linear-gradient(360deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 69.85%)",
         }}
-      ></div>
+      />
 
-      {/* Main Content Container - children are absolutely positioned */}
-      <div className="relative w-full h-full mx-auto">
-        {/* "LET'S BUILD THE FUTURE..." Text */}
-        <h2 className="font-squada absolute left-[145px] top-[calc(50%-308px/2-23.5px)] w-[431.25px] h-[308px] font-normal text-[67.5px] leading-[113.96%] uppercase text-white">
-          LET&apos;S BUILD THE <br />
-          FUTURE OF <br />
-          COMBAT <br />
-          SIMULATION
-        </h2>
-
-        {/* "contact us" Title for form area */}
-        <h3 className="absolute left-[calc(50%_-_118px/2_+_67px)] top-[54.6px] w-[150px] h-[29px] font-['Georama'] font-semibold text-[19.2px] leading-[150%] text-center tracking-[0.15em] text-[#EFEFEF]">
-          contact us
-        </h3>
-
-        {/* Decorative Line under "contact us" title */}
-        <div className="absolute left-[728px] top-[84px] w-[473px] h-[1px] bg-gray-400 opacity-50"></div>
-
-        {/* Form Area */}
-        <form
-          className="absolute left-[728px] top-[103px] w-[473px] space-y-[11px]"
-          onSubmit={handleSubmit}
-        >
-          <div className="flex flex-row space-x-[11px]">
-            <Input
-              type="text"
-              name="name"
-              value={form.name}
-              onChange={handleChange}
-              placeholder="NAME"
-              className="w-[231px] h-[36px] bg-[rgba(255,255,255,0.22)] rounded-[4px] px-[10px] py-[6px] font-['Georama'] font-semibold text-[16px] leading-[150%] text-white placeholder-white/70 placeholder:text-center placeholder:tracking-[0.15em] placeholder:[font-variant:small-caps] focus:ring-1 focus:ring-white/50"
-            />
-            <Input
-              type="email"
-              name="email"
-              value={form.email}
-              onChange={handleChange}
-              placeholder="EMAIL"
-              className="w-[231px] h-[36px] bg-[rgba(255,255,255,0.22)] rounded-[4px] px-[10px] py-[6px] font-['Georama'] font-semibold text-[16px] leading-[150%] text-white placeholder-white/70 placeholder:text-center placeholder:tracking-[0.15em] placeholder:[font-variant:small-caps] focus:ring-1 focus:ring-white/50"
-            />
-          </div>
-          <div>
-            <Textarea
-              name="message"
-              value={form.message}
-              onChange={handleChange}
-              placeholder="MESSAGE"
-              className="w-[473px] h-[102px] bg-[rgba(255,255,255,0.22)] rounded-[4px] px-[10px] py-[6px] font-['Georama'] font-semibold text-[16px] leading-[150%] text-white placeholder-white/70 placeholder:text-left placeholder:pt-1 placeholder:tracking-[0.15em] placeholder:[font-variant:small-caps] resize-none focus:ring-1 focus:ring-white/50"
-              rows={3}
-            />
+      {/* Main Content Container */}
+      <div className="relative w-full h-full max-w-[1200px] mx-auto px-4 lg:px-8">
+        <div className="flex flex-col lg:flex-row items-start justify-between h-full py-8 lg:py-12">
+          {/* Left Side - Title */}
+          <div className="flex-1 mb-8 lg:mb-0 lg:pr-8">
+            <h2 className="font-squada font-normal text-3xl lg:text-[67.5px] leading-[113.96%] uppercase text-white">
+              LET&apos;S BUILD THE <br />
+              FUTURE OF <br />
+              COMBAT <br />
+              SIMULATION
+            </h2>
           </div>
 
-          <Button
-            type="submit"
-            className="w-[473px] h-[36px] bg-[rgba(255,255,255,0.4)] border border-[#E3E3E3] rounded-[4px] font-['Georama'] font-semibold text-[16px] leading-[150%] text-center tracking-[0.15em] text-white uppercase hover:bg-[rgba(255,255,255,0.6)] disabled:opacity-70"
-            disabled={loading}
-          >
-            {loading ? "SENDING..." : "SEND"}
-          </Button>
-        </form>
+          {/* Right Side - Form and Contact */}
+          <div className="flex-1 lg:max-w-[500px] w-full">
+            {/* Contact us Title */}
+            <h3 className="font-['Georama'] font-semibold text-base lg:text-[19.2px] leading-[150%] text-center tracking-[0.15em] text-[#EFEFEF] mb-4">
+              contact us
+            </h3>
 
-        {/* Contact Info Block */}
-        <div className="absolute left-[722px] top-[calc(50%_-_101px/2_+_96px)] w-auto h-auto text-white font-['Georama'] font-light text-[24px] leading-[120%] tracking-[0.05em] space-y-[11px]">
-          <div className="flex items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="28.8"
-              height="28.8"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="icon icon-tabler icons-tabler-outline icon-tabler-world mr-[16.8px] flex-shrink-0"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
-              <path d="M3.6 9h16.8" />
-              <path d="M3.6 15h16.8" />
-              <path d="M11.5 3a17 17 0 0 0 0 18" />
-              <path d="M12.5 3a17 17 0 0 1 0 18" />
-            </svg>
-            <a
-              href="https://DustOfWar.net"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:underline"
-            >
-              DustOfWar.net
-            </a>
-          </div>
-          <div className="flex items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="30"
-              height="30"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin mr-[10px] flex-shrink-0"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M8 11v5" />
-              <path d="M8 8v.01" />
-              <path d="M12 16v-5" />
-              <path d="M16 16v-3a2 2 0 1 0 -4 0" />
-              <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="27"
-              height="27"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="icon icon-tabler icons-tabler-outline icon-tabler-brand-discord mr-[10px] ml-[6.6px] flex-shrink-0"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M8 12a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" />
-              <path d="M14 12a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" />
-              <path d="M15.5 17c0 1 1.5 3 2 3c1.5 0 2.833 -1.667 3.5 -3c.667 -1.667 .5 -5.833 -1.5 -11.5c-1.457 -1.015 -3 -1.34 -4.5 -1.5l-.972 1.923a11.913 11.913 0 0 0 -4.053 0l-.975 -1.923c-1.5 .16 -3.043 .485 -4.5 1.5c-2 5.667 -2.167 9.833 -1.5 11.5c.667 1.333 2 3 3.5 3c.5 0 2 -2 2 -3" />
-              <path d="M7 16.5c3.5 1 6.5 1 10 0" />
-            </svg>
-            <span>Dust of War</span>
-          </div>
-          <div className="flex items-center">
-            <MailIcon className="w-[28.8px] h-[28.8px] mr-[16.8px] flex-shrink-0" />
-            <span>Itailevin@DustOfWar.net</span>
-          </div>
-          {errorMessage && (
-            <div className="text-red-400 text-sm pt-1 font-bold">
-              {errorMessage}
+            {/* Decorative Line */}
+            <div className="w-full h-[1px] bg-gray-400 opacity-50 mb-6" />
+
+            {/* Form */}
+            <form className="space-y-3 mb-8" onSubmit={handleSubmit}>
+              <div className="flex flex-col md:flex-row gap-3">
+                <Input
+                  type="text"
+                  name="name"
+                  value={form.name}
+                  onChange={handleChange}
+                  placeholder="NAME"
+                  className="flex-1 h-[36px] bg-[rgba(255,255,255,0.22)] rounded-[4px] px-[10px] py-[6px] font-['Georama'] font-semibold text-[16px] leading-[150%] text-white placeholder-white/70 placeholder:text-center placeholder:tracking-[0.15em] placeholder:[font-variant:small-caps] focus:ring-1 focus:ring-white/50"
+                />
+                <Input
+                  type="email"
+                  name="email"
+                  value={form.email}
+                  onChange={handleChange}
+                  placeholder="EMAIL"
+                  className="flex-1 h-[36px] bg-[rgba(255,255,255,0.22)] rounded-[4px] px-[10px] py-[6px] font-['Georama'] font-semibold text-[16px] leading-[150%] text-white placeholder-white/70 placeholder:text-center placeholder:tracking-[0.15em] placeholder:[font-variant:small-caps] focus:ring-1 focus:ring-white/50"
+                />
+              </div>
+              <Textarea
+                name="message"
+                value={form.message}
+                onChange={handleChange}
+                placeholder="MESSAGE"
+                className="w-full h-[102px] bg-[rgba(255,255,255,0.22)] rounded-[4px] px-[10px] py-[6px] font-['Georama'] font-semibold text-[16px] leading-[150%] text-white placeholder-white/70 placeholder:text-left placeholder:pt-1 placeholder:tracking-[0.15em] placeholder:[font-variant:small-caps] resize-none focus:ring-1 focus:ring-white/50"
+                rows={3}
+              />
+              <Button
+                type="submit"
+                className="w-full h-[36px] bg-[rgba(255,255,255,0.4)] border border-[#E3E3E3] rounded-[4px] font-['Georama'] font-semibold text-[16px] leading-[150%] text-center tracking-[0.15em] text-white uppercase hover:bg-[rgba(255,255,255,0.6)] disabled:opacity-70"
+                disabled={loading}
+              >
+                {loading ? "SENDING..." : "SEND"}
+              </Button>
+            </form>
+
+            {/* Contact Info */}
+            <div className="text-white font-['Georama'] font-light text-lg lg:text-[24px] leading-[120%] tracking-[0.05em] space-y-3">
+              <div className="flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="mr-4 flex-shrink-0"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                  <path d="M3.6 9h16.8" />
+                  <path d="M3.6 15h16.8" />
+                  <path d="M11.5 3a17 17 0 0 0 0 18" />
+                  <path d="M12.5 3a17 17 0 0 1 0 18" />
+                </svg>
+                <a
+                  href="https://DustOfWar.net"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
+                  DustOfWar.net
+                </a>
+              </div>
+              <div className="flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="mr-4 flex-shrink-0"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M8 11v5" />
+                  <path d="M8 8v.01" />
+                  <path d="M12 16v-5" />
+                  <path d="M16 16v-3a2 2 0 1 0 -4 0" />
+                  <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="mr-2 flex-shrink-0"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M8 12a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" />
+                  <path d="M14 12a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" />
+                  <path d="M15.5 17c0 1 1.5 3 2 3c1.5 0 2.833 -1.667 3.5 -3c.667 -1.667 .5 -5.833 -1.5 -11.5c-1.457 -1.015 -3 -1.34 -4.5 -1.5l-.972 1.923a11.913 11.913 0 0 0 -4.053 0l-.975 -1.923c-1.5 .16 -3.043 .485 -4.5 1.5c-2 5.667 -2.167 9.833 -1.5 11.5c.667 1.333 2 3 3.5 3c.5 0 2 -2 2 -3" />
+                  <path d="M7 16.5c3.5 1 6.5 1 10 0" />
+                </svg>
+                <span>Dust of War</span>
+              </div>
+              <div className="flex items-center">
+                <MailIcon className="w-6 h-6 mr-4 flex-shrink-0" />
+                <span>Itailevin@DustOfWar.net</span>
+              </div>
+              {errorMessage && (
+                <div className="text-red-400 text-sm pt-1 font-bold">
+                  {errorMessage}
+                </div>
+              )}
+              {successMessage && (
+                <div className="text-green-400 text-sm pt-1 font-bold">
+                  {successMessage}
+                </div>
+              )}
             </div>
-          )}
-          {successMessage && (
-            <div className="text-green-400 text-sm pt-1 font-bold">
-              {successMessage}
-            </div>
-          )}
+          </div>
         </div>
       </div>
     </section>
