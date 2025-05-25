@@ -3,7 +3,10 @@ import Link from "next/link";
 
 export function HeroSection() {
   return (
-    <section className="relative w-[1440px] h-[726px] flex items-center justify-center text-white">
+    <section
+      id="section1"
+      className="relative w-[1440px] h-[726px] flex items-center justify-center text-white"
+    >
       {/* Background Image - pic1 */}
       <div className="absolute inset-0 z-0">
         <Image

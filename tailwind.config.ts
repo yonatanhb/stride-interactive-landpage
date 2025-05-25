@@ -22,6 +22,7 @@ const config: Config = {
         anta: ["var(--font-anta)"],
         "alumni-sans": ["var(--font-alumni-sans)"],
         georama: ["var(--font-georama)"],
+        squada: ['"Squada One"', "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",

@@ -3,6 +3,7 @@ import Image from "next/image";
 export function ProductSection() {
   return (
     <section
+      id="section3"
       className="relative w-[1440px] h-[516px] flex items-center"
       style={{
         background:

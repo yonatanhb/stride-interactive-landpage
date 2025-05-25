@@ -35,6 +35,10 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:wght@500&display=swap"
           rel="stylesheet"
         />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap"
+          rel="stylesheet"
+        />
       </head>
       <body
         className={`${inter.className} ${anta.className} ${alumniSansSC.className} ${georama.className}`}

@@ -4,29 +4,49 @@ export function Navigation() {
   return (
     <nav className="sticky top-0 w-[1440px] z-50 bg-black/80 backdrop-blur-sm">
       <div className="px-4 py-4 flex justify-between items-center">
-        <Link href="/" className="text-white font-bold text-xl">
-          STRIDE
-        </Link>
-        <div className="flex space-x-6">
-          <Link
-            href="/"
-            className="text-white hover:text-gray-300 transition-colors"
-          >
-            Home
-          </Link>
-          <Link
-            href="/about"
-            className="text-white hover:text-gray-300 transition-colors"
-          >
-            About
-          </Link>
-          <Link
-            href="/contact"
-            className="text-white hover:text-gray-300 transition-colors"
-          >
-            Contact us
+        <div className="flex-1 flex justify-start">
+          <Link href="/" className="text-white font-bold text-xl">
+            STRIDE
           </Link>
         </div>
+        <div className="flex-1 flex justify-center">
+          <div className="flex space-x-6">
+            <div className="group flex flex-col items-center">
+              <Link
+                href="#section1"
+                className="text-white hover:text-gray-300 transition-colors"
+              >
+                Home
+              </Link>
+              <span className="block h-2 mt-0 text-2xl font-bold text-white opacity-0 group-hover:opacity-100 transition-opacity leading-none">
+                •
+              </span>
+            </div>
+            <div className="group flex flex-col items-center">
+              <Link
+                href="#section3"
+                className="text-white hover:text-gray-300 transition-colors"
+              >
+                About
+              </Link>
+              <span className="block h-2 mt-0 text-2xl font-bold text-white opacity-0 group-hover:opacity-100 transition-opacity leading-none">
+                •
+              </span>
+            </div>
+            <div className="group flex flex-col items-center">
+              <Link
+                href="#section5"
+                className="text-white hover:text-gray-300 transition-colors"
+              >
+                Contact us
+              </Link>
+              <span className="block h-2 mt-0 text-2xl font-bold text-white opacity-0 group-hover:opacity-100 transition-opacity leading-none">
+                •
+              </span>
+            </div>
+          </div>
+        </div>
+        <div className="flex-1"></div>
       </div>
     </nav>
   );

@@ -93,28 +93,32 @@ body {
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .dow-main-desc {
   position: absolute;
   width: 746px;
   height: 50px;
-  left: calc(50% - 746px/2 + 228px);
+  left: calc(50% - 746px / 2 + 228px);
   top: 147px;
-  font-family: 'Georama', sans-serif;
+  font-family: "Georama", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20.48px;
   line-height: 120%;
   letter-spacing: 0.05em;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .dow-visit-link {
   position: absolute;
   width: 358px;
   height: 29px;
-  left: calc(50% - 358px/2 + 34px);
+  left: calc(50% - 358px / 2 + 34px);
   top: 197px;
-  font-family: 'Georama', sans-serif;
+  font-family: "Georama", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 19.2px;
@@ -122,35 +126,35 @@ body {
   text-align: center;
   letter-spacing: 0.15em;
   text-decoration-line: underline;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .dow-redefine {
   position: absolute;
   width: 861px;
   height: 27px;
-  left: calc(50% - 861px/2 + 285.5px);
+  left: calc(50% - 861px / 2 + 285.5px);
   top: 287px;
-  font-family: 'Alumni Sans SC', sans-serif;
+  font-family: "Alumni Sans SC", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 36px;
   line-height: 75%;
   letter-spacing: 0.05em;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .dow-group29 {
   position: absolute;
   width: 732px;
   height: 55px;
-  left: calc(50% - 732px/2 + 221px);
+  left: calc(50% - 732px / 2 + 221px);
   top: 314px;
-  font-family: 'Alumni Sans SC', sans-serif;
+  font-family: "Alumni Sans SC", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 22px;
   line-height: 125%;
   letter-spacing: 0.05em;
-  color: #FFFFFF;
+  color: #ffffff;
 }
