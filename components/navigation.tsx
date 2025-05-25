@@ -6,7 +6,7 @@ export function Navigation() {
       <div className="px-4 lg:px-8 py-4 flex justify-between items-center">
         <div className="flex-1 flex justify-start">
           <Link href="/" className="font-['anta'] text-white font-bold text-xl">
-            STRIDE
+            STRIDE INTERACTIVE
           </Link>
         </div>
         <div className="flex-1 flex justify-center">
