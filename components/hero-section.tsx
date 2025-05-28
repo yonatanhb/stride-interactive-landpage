@@ -28,7 +28,7 @@ export function HeroSection() {
       {/* Content Container */}
       <div className="relative z-10 w-full max-w-[1200px] mx-auto px-4 lg:px-8 flex flex-col items-center pb-[5px]">
         {/* Logo */}
-        <div className="w-[17%] h-auto min-w-[234פס] max-w-[318px] mb-6 lg:mb-8">
+        <div className="w-[17%] h-auto min-w-[234px] max-w-[318px] mb-6 lg:mb-8">
           <div className="relative w-full aspect-[245/316]">
             <Image
               src="/stridelogowhite.png"
