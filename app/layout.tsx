@@ -10,6 +10,7 @@ const alumniSansSC = Alumni_Sans({
   weight: "500",
   subsets: ["latin"],
   style: "normal",
+  variable: "--font-alumni-sans",
 });
 const georama = Georama({ weight: "400", subsets: ["latin"] });
 
@@ -41,7 +42,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.className} ${anta.className} ${alumniSansSC.className} ${georama.className}`}
+        className={`${inter.className} ${anta.className} ${alumniSansSC.variable} ${georama.className}`}
       >
         <ThemeProvider
           attribute="class"
